@@ -1,0 +1,78 @@
+配置环境：python+pycharm
+cmd终端运行python程序：
+F:\pycharm\test1\test1.py
+2.1hello world
+2.2变量
+2.3字符串
+1)添加空格\t换行\n
+2)删除空白：rstrip()
+3)字符串内有引号时，需要添加\
+2.4数
+浮点数、整数、常量
+2.5注释
+#  注释
+第3章 列表简介
+3.1列表
+1)[]表示列表b=['1','2','3'],print(b[0])
+2)列表添加元素b.append('4')
+插入元素b.insert(1,'9')
+删除元素pop()---删除列表末尾元素
+根据值删除元素remove('1')
+3.2组织列表
+1)列表排序sort()按字母顺序排序
+cars=['bmw','audi','toyota','subaru']
+cars.sort()
+print(cars)
+与字母顺序相反排序sort(reverse=True)
+2)临时排序or相反排序
+print(cars)
+print(sorted(cars))
+print(cars)
+or
+print(sorted(places,reverse=True))
+3)逆序排列列表reverse()
+4)列表长度len(列表)
+5)避免列表索引错误，访问列表最后一个元素：places[-1]
+4.1遍历整个列表
+for placeinplaces:
+print(place)
+1)注意打印列表元素
+forplaceinplaces:
+print(f"{place.title()},thatisagoodplace!")
+2)for执行语句后的操作,跳出循环。这里与其他语言不同的是，不需要括号，而是利用每行缩进来判断
+在循环内还是循环外。
+4.2避免缩进错误
+1)for循环忘记缩进运行，程序会报错
+2）语法正确，逻辑错误。
+3）不必要的缩进也会报错。
+4.3创建数值列表
+1)使用函数range
+ for value in range(0,5):
+       print(value)
+2)创建数字列表
+ numbers=list(range(0,5))
+ print(numbers)
+
+ doubles=[]
+ for value in range(2,7):
+          double=value*2
+          doubles.append(double)
+ print(doubles)
+3)列表进行计算
+ min(doubles)  max(doubles) sum(doubles)
+4)列表解析
+squares=[value**2forvalueinrange(1,11)]
+print(squares)
+4.4使用列表一部分
+1）切片
+ doubles[2:]
+遍历切片
+ for double in doubles[:5]:
+            print(doubles.title())
+4.5元组
+1）元组看起来像列表，但是是使用圆括号标识
+ dimensions=(200,50),print(dimensions[0])
+2)遍历元组
+ for dimension in dimensions:
+   print(dimension)
+
