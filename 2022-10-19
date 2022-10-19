@@ -75,4 +75,46 @@ print(squares)
 2)遍历元组
  for dimension in dimensions:
    print(dimension)
+第5章 if语句
+1）大upper小lower写
+ if car=='bmw':
+      print(car.upper())
+值相等，大小写不同仍然是不相等的
+2)检查多个条件
+ if ****and****
+ if****or*****
+3)if-elif-else
+  if****:
+       ****
+ elif ****:
+       *****
+elif ****:
+       *****
+……
+ else:
+      *****
+print(f"{age}岁是个青少年")
+第六章 字典
+1）字典放在{}表示
+ alien_0={'color':'green','points':5}
+ print（alien_0['color'])
+2)添加键值对
+ alien_0['x_position']=0
+ alien_0['y_position']=25
+3)创建空字典
+ alien_0={}
+ alien_0['color']='green'
+4)删除键值
+delalien_0['color']
+5）用get()来访问值，当获取的键值不存在不会报错
+alien_1={
+'x_position':0,
+'y_position':35
+}
+point_value=alien_1.get('points','Nopointvalueassigned')
+print(point_value)
+6)遍历所有键值对
+ for key,value in numbers.items():
+ print(f"{key} favourite number is {value}")
+ 
 
