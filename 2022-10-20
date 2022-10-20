@@ -1,0 +1,72 @@
+用户输入和while循环
+name=input("Please enter your name:")
+print(f"\nHello,{name}!")
+prompt="If you tell us who are you,we can personalize the message you see"
+prompt+="\nWhat is your first name"
+name=input(prompt)
+print(f"\nHello,{name}!")
+age=input("How old are you?")
+age=int(age)
+if age>=18:
+    print("True")
+height=input("How tall are you,in inches?")
+height=int(height)
+if height>=48:
+    print("\nYou are tall enough to ride!")
+else:
+    print("\nYou will be able to ride when you are a little older.")
+
+prompt="can i help you?what is kind of cars you would like?"
+prompt+="\n"
+car=input(prompt)
+print(f"Let me see if i can find you a {car}")
+prompt = "Please input a number:"
+prompt += "\t"
+number = input(prompt)
+number = int(number)
+if number % 10 == 0:
+    print("yes")
+else:
+    print("no")
+在列表之间移动元素
+unconfirmed_users=['alice','brian' ,'candace']
+confirmed_users=[]
+while unconfirmed_users:
+    current_user=unconfirmed_users.pop()
+    print(f"Verifying user:\n\t\t\t{current_user.title()}")
+    confirmed_users.append(current_user)
+print(f"\nThe following users have been confirmed:\n{confirmed_users}")
+
+删除为特定值的所有列表元素
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+while 'cat' in pets:
+    pets.remove('cat')
+print(pets)
+
+使用用户输入来填充字典
+responses = {}
+polling_active = True
+while polling_active:
+    name = input("\nWhat is your name?")
+    response = input("Which mountain would you like to climb someday?")
+    responses[name] = response
+    repeat = input("Would you like to let another person respond?(yes/no)")
+    if repeat == 'no':
+        polling_active = False
+print("\n-----Poll Results-----")
+for name, responses in responses.items():
+    print(f"{name} would like to climb {response}")
+
+places={}
+Contine=True
+while Contine:
+    name=input("What is your name?")
+    place=input("If you could visit one place in the world,where would go?")
+    places[name]=place
+    repeat=input("Would you like to let another person respond?(yes/no)")
+    if repeat=="no":
+        Contine=False
+print("***************")
+for name,place in places.items():
+    print(f"{name} would like to go {place}")
