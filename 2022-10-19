@@ -116,5 +116,34 @@ print(point_value)
 6)遍历所有键值对
  for key,value in numbers.items():
  print(f"{key} favourite number is {value}")
+6.4嵌套
+1）字典列表
+alien_0={'color':'green','points':5}
+alien_1={'color':'red','points':15}
+alien_2={'color':'yellow','points':10}
+aliens=[alien_0,alien_1,alien_2]
+foralieninaliens:
+print(alien)
+2）字典中存储字典
+cities={
+'nanjing':{
+'country':'china',
+'population':20000,
+'fact':'南京大屠杀'
+},
+'london':{
+'country':'england',
+'population':1000,
+'fact':'八国联军'
+}
+}
+forcity,city_infoincities.items():
+print(f"City:{city}")
+country=f"{city_info['country']}"
+population=f"{city_info['population']}"
+fact=f"{city_info['fact']}"
+print(f"\tCountry:{country}")
+print(f"\tPopulation:{population}")
+print(f"\tFact:{fact}")
  
 
