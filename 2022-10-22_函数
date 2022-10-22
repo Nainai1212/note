@@ -1,0 +1,128 @@
+# def greet_user(username):
+#     print(f"hello,{username}!")
+# greet_user("lily")
+#
+# def display_message():
+#     print("本章学到了函数")
+# display_message()
+#
+# def favourite_book(book):
+#     print(f"One of my favourite book is {book}")
+# favourite_book("Python")
+# def describe_pet(animal_type, pet_name):
+#     print(f"\nI have a {animal_type}")
+#     print(f"My {animal_type}'s name is {pet_name.title()}")
+#
+#
+# describe_pet('hamster', 'harry')
+# describe_pet('dog', 'Younland')
+# print("************")
+#
+#
+# def describe_pet1(pet_name, animal_type='dog'):
+#     print(f"\nI have a {animal_type}")
+#     print(f"My {animal_type}'s name is {pet_name.title()}")
+#
+#
+# describe_pet1('didi')
+# def get_formatted_name(first_name,last_name):
+#     full_name=f"{first_name} {last_name}"
+#     return full_name.title()
+# musician=get_formatted_name('jimi','hendix')
+# print(musician)
+# 实参可选
+# def get_formatted_name(first_name,last_name,middle_name=''):
+#     if middle_name:
+#         full_name=f"{first_name} {middle_name} {last_name}"
+#     else:
+#         full_name=f"{first_name} {last_name}"
+#     return full_name.title()
+# musician=get_formatted_name('jimi','hendrix')
+# musician1=get_formatted_name('john','hooker','lee')
+# print(musician)
+# print(musician1)
+
+# 返回字典
+# def build_person(first_name,last_name,age=None):
+#     person={'first':first_name,
+#             'last':last_name}
+#     if age:
+#         person['age']=age
+#     return person
+# musician=build_person('jimi','hendrix',age=27)
+# print(musician)
+
+# 函数和while循环
+# def get_formatted_name(first_name,last_name):
+#     full_name=f"{first_name} {last_name}"
+#     return full_name.title()
+# while True:
+#     print("\nPlease tell me your name:")
+#     print("(enter 'q' at any time to quit)")
+#     f_name=input("First_name:")
+#     if f_name=='q':
+#         break
+#     l_name=input("Last_name:")
+#     if l_name=='q':
+#         break
+#     full_name=get_formatted_name(f_name,l_name)
+#     print(f"\nHello,{full_name}!")
+# 传递列表
+# def greet_users(names):
+#     for name in names:
+#         msg = f"Hello,{name.title()}!"
+#         print(msg)
+#
+#
+# usernames = ['hanah', 'ty', 'margot']
+# greet_users(usernames)
+
+# unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+# completed_models = []
+# while unprinted_designs:
+#     current_design=unprinted_designs.pop()
+#     print(f"Printing model:{current_design}")
+#     completed_models.append(current_design)
+# print("\nThe following models have been printed:")
+# for completed_model in completed_models:
+#     print(completed_model)
+
+# 传递任意数量的实参
+# def make_pizza(*toppings):
+#     print("\nMaking a pizza with following toppongs:")
+#     for topping in toppings:
+#         print(f"{topping}")
+#
+# make_pizza('peperoni')
+# make_pizza('mushrooms','green peppers','extra chess')
+
+# 结合使用位置实参和任意数量实参
+# def make_pizza(size, *toppings):
+#     print(f"\nMaking a {size}-inch pizza with the following toppings:")
+#     for topping in toppings:
+#         print(f"-topping")
+# make_pizza(16,'peperoni')
+# make_pizza('12','mushrooms','green peppers','extra chess')
+
+# 使用任意数量的关键字实参
+def build_profile(first,last,**user_info):
+    user_info['first_name']=first
+    user_info['last_name']=last
+    return user_info
+user_profile=build_profile('albert','einstein',location='princeton',filed='physics')
+print(user_profile)
+
+# 将函数存储在模块中
+#创建pizza.py文件，代码如下
+# def  make_pizza(size,*toppings):
+#     print(f"\nMaking a{size}-inch pizza with the following toppings:")
+#     for topping in toppings:
+#         print(f"-{topping}")
+# #导入以上代码
+# import pizza
+
+# 导入特定函数
+# from module_name import function_0,function_1,function_2
+
+# 导入模块中的所有函数
+# from pizza import *
